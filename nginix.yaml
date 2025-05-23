@@ -1,6 +1,7 @@
 #we are trying to install nginx in this playbook
 
 - name: nginx playbook
+  become: true
   hosts: web
   tasks: 
   - name: install nginx

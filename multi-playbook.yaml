@@ -1,0 +1,18 @@
+#we are wrtiing multi playbook
+#multi playbook is a playbook which contains multiple plays
+#we can have multiple plays in a playbook 
+#playbook always start with - dash
+
+- name: playbook-1
+  hosts: localhost
+  tasks:
+  - name: ping the localhost
+    ansible.builtin.debug:
+      msg: "hello from playbook1"
+
+- name: playbook-2
+  hosts: web
+  tasks:
+  - name: ping the web server
+    ansible.builtin.debug:
+      msg: "hello from playbook2"

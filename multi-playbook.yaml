@@ -6,13 +6,13 @@
 - name: playbook-1
   hosts: localhost
   tasks:
-  - name: ping the localhost
+  - name: play-1 from task-1
     ansible.builtin.debug:
       msg: "hello from playbook1"
 
 - name: playbook-2
   hosts: web
   tasks:
-  - name: ping the web server
+  - name: play-2 from task-2 
     ansible.builtin.debug:
       msg: "hello from playbook2"

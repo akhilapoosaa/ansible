@@ -1,0 +1,32 @@
+#json is a data format that is used to store and exchange data
+{
+    "name": "Akhila",
+    "age": 31,
+    "Address": {
+        "address-line1": "sahenagar, Vanasthalipiuram",
+        "address-line2": "hyderabad, 500070",
+        "state": "Telangana"
+    }
+}
+
+#practicing json with multiple address, [] is used to store multiple values
+# {} is used to store key-value pairs
+
+{
+    "name": "Akhila",
+    "age": 31,
+    "address": [  
+        {
+            "address-line1": "sahenagar, Vanasthalipiuram",
+            "address-line2": "hyderabad, 500070",
+            "state": "Telangana",
+            "type": "home"  
+        },                       
+        {
+            "address-line1": "sahenagar, Vanasthalipiuram",
+            "address-line2": "hyderabad, 500070",
+            "state": "Telangana",
+            "type": "office"
+        } 
+    ]
+}

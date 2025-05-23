@@ -1,0 +1,35 @@
+#yaml starts with --- and ends with ...
+#yaml has identation with spaces
+
+- name: Akhila     
+  age: 32
+  dob: 29-09-1993
+  address: 
+    address-line1: sahebnagar
+    address-line2: Vanasthalipuram
+    city: Hyderabad
+    state: Telangana 
+  email: 123@.gmail.com
+
+#in yaml we can have multiple documents, use only spaces for identation
+#dont use tabs, always give space after - and colon : 
+#here we are using - to create a list that is - name
+#we have two lists and every list represints using - dash 
+- name: balaji   #key is name and value is balaji
+  age: 32
+  dob: 29-09-1993
+  address:    #key is address and value is list, list has 2 items and they have key-value pairs
+     - address-line1: sahebnagar
+       address-line2: Vanasthalipuram
+       city: Hyderabad
+       state: Telangana 
+     - address-line1: velachery
+       address-line2: street-no-1 
+       city: chennai
+       state: Tamilnadu
+  email: 123@.gmail.com
+
+
+
+
+          

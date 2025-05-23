@@ -1,0 +1,20 @@
+#xml is a markup language for encoding documents in a format that is both human-readable and machine-readable.
+#writing a person information in xml format
+
+<person>  #person is referred as object
+    <name>akhila</name>  #these are fields
+    <age>31</age>
+    <DOB>29-09-93</DOB>
+    <Address>   #address ia an other object
+        <Home-address>
+            <address-line1>sahebanagar, Vanasthalipuram</address-line1> 
+            <address-line2>hyderabad, 500070</address-line2> #these are the nested objects (fields)
+            <address-line3>Telanagana</address-line3>
+        </Home-address>
+        <Office-address>
+            <address-line1>Hitech city</address-line1>
+            <address-line2>hyderabad, 500081</address-line2>
+            <address-line3>Telanagana</address-line3>
+        </Office-address>
+    </Address>
+</person>

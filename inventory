@@ -1,8 +1,8 @@
 192.187.56.3
-192.187.56.4   #these are independent servers
+192.187.56.4   # these are independent servers
 
 [web]
-192.187.56.3    #these are group servers
+192.187.56.3    # these are group servers
 192.187.56.4
 
 [catalogue]
@@ -13,7 +13,7 @@
 192.187.56.3
 192.187.56.4
 
-[roboshop:children]  #nothing but group of groups
+[roboshop:children]  # nothing but group of groups
 web
 cart
 catalogue

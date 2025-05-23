@@ -11,7 +11,7 @@
       msg: "hello from playbook1"
 
 - name: playbook-2
-  hosts: web
+  hosts: localhost
   tasks:
   - name: play-2 from task-2 
     ansible.builtin.debug:

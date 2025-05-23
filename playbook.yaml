@@ -1,0 +1,7 @@
+#we are writing playbook to ping the webserver
+
+- name: ping playbook
+  hosts: webserver
+  tasks: 
+  - name: ping the web server
+    ansible.builtin.ping:      # it is a ping module name

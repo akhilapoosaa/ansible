@@ -1,0 +1,15 @@
+# Ansible playbook to demonstrate the use of variables
+# #we are using variables in this playbook
+#varaiables are used to store values
+# #we can use variables in playbooks, roles, tasks, templates, and inventory files
+
+- name: variables from play-level
+  hosts: localhost
+  vars:   #vars is a keyword to define variables
+    course: "devops" #course is a variable and devops is a value
+    name: "Akhila"  
+    duration: "3 months"
+  tasks:
+  - name: check varaibles
+    ansible.builtin.debug:
+      msg: "hello, my name is {{name}} and Iam learning {{course}} for {{duration}}"

@@ -10,8 +10,8 @@
 192.187.56.9
 
 [cart]
-192.187.56.3
-192.187.56.4
+192.187.56.8
+192.187.56.10
 
 [roboshop:children]  # nothing but group of groups
 web

@@ -13,13 +13,13 @@
       Ansible: 1
       AWS: 1
     Employee: true   #boolean type has only true or false
-  tasks:
+  tasks:  #task is list type bcz it has multiple tasks ans starts with -
   - name: print key value pair
     ansible.builtin.debug:
       msg: "Name is {{Name}}" 
   
   - name: print list
-    ansible.builtin.debug:
+    ansible.builtin.debug:  #module is a map type because it has key and value pairs
       msg: "Skills are {{SKILLS}}"    
 
   - name: print map

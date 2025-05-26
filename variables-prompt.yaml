@@ -1,0 +1,16 @@
+#using prompt to get variables from user
+- name: variables from prompt
+  hosts: localhost
+  vars_prompt:
+  - name: "COURSE"
+    prompt: "Enter your course name"
+    private: false #private: false means the input will be not hidden
+  - name: "PASSWORD"
+    prompt: "Enter your password"
+    private: true #private: true means the input will be hidden
+  tasks:
+  - name: print and check the values
+    ansible.builtin.debug:
+      msg: "hello, my course is {{COURSE}} and my password is {{PASSWORD}}"
+    #note: the password will not be displayed in the output
+   

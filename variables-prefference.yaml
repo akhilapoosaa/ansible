@@ -1,0 +1,25 @@
+#checking the variable preference from all levels which one will be used
+# This playbook demonstrates variable precedence in Ansible, 
+#showing how variables can be defined at different levels and how they override each other.
+
+- name: checking variable preference
+  hosts: localhost
+  vars_files:  #checking from files
+  - vars.yaml
+  vars_prompt: #checking from prompt
+  - name: "PERSON" #vars_prompt is a keyword to prompt the user for input
+    prompt: "Enter your name"
+    private: false
+  - name: "WISHES" 
+    prompt: "Enter your wishes"
+    private: false #private: false means the input will be not hidden
+  vars: #checking from play level
+    PERSON: "Akhila from play"
+    WISHES: "Good Morning from play"
+  tasks: #from task level
+  - name: check variables
+    vars:
+      PERSON: "Akhila from task"
+      WISHES: "Good Evening from task" 
+    ansible.builtin.debug:
+      msg: "Hi {{PERSON}}, Good {{WISHES}}"

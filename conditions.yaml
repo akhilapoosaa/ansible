@@ -6,12 +6,12 @@
   tasks: 
   - name: check if user akhila is exist or not
     ansible.builtin.user:
-      name: roboshop
+      name: akhila
       state: present
     register: user_check  #register is used to store the output of the task in a variable
 
   - name: create user
     ansible.builtin.user:
-      name: roboshop
+      name: akhila
       state: present
     when: user_check is failed  #when is used to execute the task only if the condition is true  

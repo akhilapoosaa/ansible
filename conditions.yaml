@@ -4,8 +4,8 @@
   hosts: localhost
   become: true  #become is used to run the task as a different user, in this case, root user
   tasks: 
-  - name: check if user akhila exist or not
-    ansible.builtin.command: id akhila  #command module is used to run a command on the remote host
+  - name: check if user roboshop exist or not
+    ansible.builtin.command: id roboshop  #command module is used to run a command on the remote host
     ignore_errors: true  #ignore_errors is used to ignore the error if the command fails,
     register: user_check  #register is used to store the output of the command in a variable called user_check
 
@@ -19,7 +19,6 @@
 
   - name: create user if not exist
     ansible.builtin.user:
-      name: akhila
-      state: present  #present means the user will be created if it does not exist, if it exists, it will not do anything
+      name: roboshop
     when: user_check.rc !=0  #when is used to execute the task only if the condition is true  
 

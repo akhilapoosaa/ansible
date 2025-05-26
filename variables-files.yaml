@@ -1,0 +1,10 @@
+#store variables in an other file and use it in the playbook
+
+- name: variables from vars file
+  hosts: localhost
+  vars_files:
+    - vars.yaml  #vars_files is a keyword to include variables from an external file
+  tasks:
+  - name: check variables from vars file
+    ansible.builtin.debug:
+      msg: "hello, my name is {{name}} and I am learning {{course}} for {{duration}}"

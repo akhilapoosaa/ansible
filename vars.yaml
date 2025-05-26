@@ -1,0 +1,5 @@
+#this file is used to define variables for the playbook
+
+course: "devops"
+name: "Akhila"
+duration: "3 months"

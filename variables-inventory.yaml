@@ -1,0 +1,8 @@
+# take variables from inventory file
+
+- name: variables from inventory file
+  hosts: localhost
+  tasks: 
+  - name: check variables from inventory file
+    ansible.builtin.debug:
+      msg: "Hi iam learning {{course}}, from {{name}} for {{duration}}"

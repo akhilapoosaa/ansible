@@ -24,5 +24,9 @@
 
   - name: print map
     ansible.builtin.debug:
-      msg: "Experience is {{Experience}}"    
+      msg: "Experience is {{Experience}}" 
+
+  - name: print boolean
+    ansible.builtin.debug:
+      msg: "Is Employee? {{Employee}}"       
 

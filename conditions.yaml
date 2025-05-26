@@ -4,7 +4,7 @@
   hosts: localhost
   become: true  #become is used to run the task as a different user, in this case, root user
   tasks: 
-  - name: check if user roboshop is exist or not
+  - name: check if user akhila is exist or not
     ansible.builtin.user:
       name: roboshop
       state: present

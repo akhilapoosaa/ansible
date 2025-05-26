@@ -1,0 +1,16 @@
+#variables using at task level
+
+- name: variables from task-level #playbook name
+  hosts: localhost
+  vars: 
+    course: "devops"
+    name: "Akhila"
+    duration: "3 months"
+  tasks: 
+  - name: check variables  #task name 
+    vars: 
+      course: :devops with aws"  #overriding the course variable at task level
+    ansible.builtin.debug:
+      msg: "hello, my name is {{name}} and I am learning {{course}} for {{duration}}"
+   
+

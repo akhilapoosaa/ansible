@@ -9,7 +9,7 @@
   tasks: 
   - name: check variables  #task name 
     vars: 
-      course: :devops with aws"  #overriding the course variable at task level
+      course: "devops with aws"  #overriding the course variable at task level
     ansible.builtin.debug:
       msg: "hello, my name is {{name}} and I am learning {{course}} for {{duration}}"
    

@@ -19,7 +19,7 @@
       msg: "Name is {{Name}}" 
   
   - name: print list
-    ansible.builtin.debug:  #module is a map type because it has key and value pairs
+    ansible.builtin.debug:  #module is a map type because it has key and value pairs key
       msg: "Skills are {{SKILLS}}"    
 
   - name: print map

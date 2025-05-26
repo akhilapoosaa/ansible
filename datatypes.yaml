@@ -1,0 +1,28 @@
+#in how many types the data will mentioned in ansible?
+# string, list, dictionary, boolean, integer, float, null
+- name: checking data types
+  hosts: localhost
+  vars: 
+    Name: "Akhila" #string has key and value 
+    SKILLS:  #list type has only values
+    - "Devops"
+    - "Ansible"
+    - "AWS"
+    Experience:   #dictionary/map type has key and value pairs
+      Devops: 2   #key is Devops and value is 2
+      Ansible: 1
+      AWS: 1
+    Employee: true   #boolean type has only true or false
+  tasks:
+  - name: print key value pair
+    ansible.builtin.debug:
+      msg: "Name is {{Name}}" 
+  
+  - name: print list
+    ansible.builtin.debug:
+      msg: "Skills are {{SKILLS}}"    
+
+  - name: print map
+    ansible.builtin.debug:
+      msg: "Experience is {{Experience}}"    
+

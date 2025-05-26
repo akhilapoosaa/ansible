@@ -1,0 +1,8 @@
+#using args to pass variables from command line
+
+- name: variables from inventory file
+  hosts: localhost
+  tasks: 
+  - name: check variables from inventory file
+    ansible.builtin.debug:
+      msg: "Hi {{PERSON}}, Good {{WISHES}}"

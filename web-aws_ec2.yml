@@ -1,0 +1,9 @@
+plugin: amazon.aws.aws_ec2 # This plugin is used to manage AWS EC2 instances.
+regions: #regions where the instances are located
+  -us-east-1 # Specify the AWS region where the instances are located.
+filters: #filters to select instances
+  tag:Name: # This filter selects instances based on their Name tag.
+    - web # This is the value of the Name tag to filter instances.
+
+#this playbook is used to ping the web servers in the AWS EC2 instances i did not run this playbook
+# in project only for understanding purpose i am keeping this playbook.

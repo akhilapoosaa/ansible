@@ -1,0 +1,27 @@
+#using loops for iteration with packages
+#iteration means repeating a task for each item in a list
+- name: loops through a list of packages
+  hosts: localhost
+  become: yes #become is used to run the task as a superuser
+  tasks:
+  - name: install package
+    ansible.builtin.package:
+      name: "{{item}}"
+      state: present #state is a keyword used to specify the state of the package
+      #present means the package should be installed
+      loop:
+      -  git
+      -  mysql
+      -  python3
+      -  java
+
+      #o/p: will be item=git, item=mysql, item=python3, item=java 
+      #all these packages will be installed on the remote host
+      #localhost is the remote host in this case
+      #the package module is used to install the package on the remote host
+
+
+
+
+
+      

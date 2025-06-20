@@ -14,10 +14,10 @@
       msg: "User check output is {{user_check}}"  #stdout is used to get the output of the command
 
   - name: print exit status or return code
-    ansible.builtin.debug:
-      msg: "return code is {{user_check.rc}}"  #rc is used to get the return code of the command, 0 means success and non-zero means failure    
+    ansible.builtin.debug:                      #0 means success and non-zero means failure    
+      msg: "return code is {{user_check.rc}}"  #rc is used to get the return code of the command
 
-  - name: create user if not exist
+  - name: create user if not exist #create user task
     ansible.builtin.user:
       name: balaji
     when: user_check.rc !=0  #when is used to execute the task only if the condition is true  

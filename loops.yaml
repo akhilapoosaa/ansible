@@ -1,0 +1,19 @@
+#using loops for iteration  
+
+- name: loops through a list of persons
+  hosts: localhost
+  tasks: 
+  - name: print persons
+    ansible.builtin.debug:
+      msg: "Hello {{item}}" #item is a default variable in Ansible that refers to the current item in the loop
+    loop: #loop is a keyword used to iterate through the list
+      #list of persons
+      - Akhila
+      - Balaji
+      - Chaitanya
+      - Anjali
+
+      #o/p: will be printed as "hello Akhila"
+      #hello Balaji
+      #hello Chaitanya
+      #hello Anjali

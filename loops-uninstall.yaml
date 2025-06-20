@@ -1,0 +1,27 @@
+#using loops to uninstall packages
+- name: loops through a list of packages to install and uninstall
+  hosts: localhost
+  become: yes #become is used to run the task as a superuser
+  tasks:
+  - name: install or uninstall package
+    ansible.builtin.package:
+      name: "{{item.name}}" #item.name is a keyword used to refer to the name of the package in the list
+      state: "{{item.state}}"  
+      #absent means the package should be uninstalled
+    loop:
+    -  {name: 'git', state: 'absent'}  #uninstall git package
+    -  {name: 'nginx', state: 'present'} #install nginx package
+
+    #we write the package name and state in a dictionary format
+    #dictionary/map is a data structure that stores data in key-value pairs
+    #here loop is a list of dictionaries where each dictionary has two keys: name and state 
+    #the loop will iterate through each item in the list and perform the action specified in the state
+    #{} #is used to define a dictionary in Ansible
+    
+    #o/p: will be (item={'name': 'git' , 'state' : 'absent'})
+    #(item={'name': 'nginx' , 'state' : 'present'})
+    #git package will be uninstalled on the remote host
+    #nginx package will be installed on the remote host
+
+
+   
